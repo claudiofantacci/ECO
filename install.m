@@ -27,6 +27,7 @@ if exist('external_libs/matconvnet/matlab', 'dir') == 7
     cd external_libs/matconvnet/matlab
     try
         disp('Trying to compile MatConvNet with GPU support')
+        % vl_compilenn('enableGpu', true, 'EnableCudnn', true, 'CudnnRoot', 'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.2', 'verbose', true)
         vl_compilenn('enableGpu', true)
     catch err
         warning('ECO:install', 'Could not compile MatConvNet with GPU support. Compiling for only CPU instead.\nVisit http://www.vlfeat.org/matconvnet/install/ for instructions of how to compile MatConvNet.\nNote: remember to move the mex-files after re-compiling.');

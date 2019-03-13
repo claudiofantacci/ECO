@@ -20,7 +20,7 @@ im = bsxfun(@minus, im, fparams.net.meta.normalization.averageImage);
 
 if gparams.use_gpu
     im = gpuArray(im);
-    cnn_feat = vl_simplenn(fparams.net, im,[],[],'CuDNN',true, 'Mode', 'test');
+    cnn_feat = vl_simplenn(fparams.net, im,[],[],'CuDNN',false, 'Mode', 'test');
 else
     cnn_feat = vl_simplenn(fparams.net, im, [], [], 'Mode', 'test');
 end

@@ -157,7 +157,7 @@ disp(['... Found file mtimesx_RealTimesReal.c in ' rname]);
 
 matlab_ver = version('-release');
 if str2num(matlab_ver(1:4)) >= 2014
-    mexopts = [prefdir '\mex_C++_win64.xml'];
+    mexopts = [prefdir '\mex_C_win64.xml'];
 else
     mexopts = [prefdir '\mexopts.bat'];
 end
